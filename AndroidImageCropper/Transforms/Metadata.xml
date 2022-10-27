@@ -1,0 +1,23 @@
+﻿<metadata>
+  <!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+  
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+
+	<!--<attr path="/api/package[@name='com.canhub.cropper.databinding']/class[@name='CropImageActivityBinding']/method[@name='root']"
+		name="managedReturn">View</attr>-->
+	<attr path="/api/package[@name='com.canhub.cropper']/class[@name='CropImageContract']/method[@name='createIntent']"
+		name="managedReturn">Android.Content.Intent</attr>
+	<attr path="/api/package[@name='com.canhub.cropper']/class[@name='CropImageContract']/method[@name='parseResult' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='android.content.Intent']]"
+		name="managedReturn">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='com.canhub.cropper']/class[@name='CropImageOptions.Creator']/method[@name='createFromParcel' and count(parameter)=1 and parameter[1][@type='android.os.Parcel']]"
+		name="managedReturn">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='com.canhub.cropper']/class[@name='CropImageOptions.Creator']/method[@name='newArray' and count(parameter)=1 and parameter[1][@type='int']]"
+		name="managedReturn">Java.Lang.Object[]</attr>
+	<!--<remove-node path="/api/package[@name='com.canhub.cropper.databinding']/class[@name='CropImageActivityBinding']" />-->
+	<!--<remove-node path="/api/package[@name='com.canhub.cropper']/class[@name='CropImageContract']" />
+	<remove-node path="/api/package[@name='com.canhub.cropper']/class[@name='CropImageOptions.Creator']" />-->
+</metadata>

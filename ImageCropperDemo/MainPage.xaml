@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ImageCropperDemo.MainPage">
+
+  <StackLayout Padding="20,40,20,20" Orientation="Vertical">
+    <Button Clicked="OnClickedRectangle" Text="Rectangle" />
+    <Button Clicked="OnClickedCircle" Text="Circle" />
+    <Image x:Name="imageView"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand" />
+  </StackLayout>
+
+</ContentPage>
