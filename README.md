@@ -1,6 +1,8 @@
 # ImageCropper.Maui
 
-.NET MAUI plugin to crop and rotate photos. Ported over and updated from from [ImageCropper.Forms](https://github.com/stormlion227/ImageCropper.Forms)
+.NET MAUI plugin to crop and rotate photos. 
+
+Ported over and updated from from : https://github.com/stormlion227/ImageCropper.Forms
 
 [![NuGet](https://img.shields.io/nuget/v/ImageCropper.Maui.svg)](https://www.nuget.org/packages/ImageCropper.Maui/)
 
@@ -26,7 +28,7 @@ Supports Android and iOS.
 ## Setup
 
 * Install the [nuget package](https://www.nuget.org/packages/ImageCropper.Maui/) in portable and all platform specific projects.
-* This plugin uses the [MediaPicker]. Be sure to complete the full setup this pciker. Please fully read through the [MediaPicker description](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/device-media/picker).
+* This plugin uses the **MediaPicker**, so be sure to complete the full setup this. Please fully read through the [MediaPicker description](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/device-media/picker).
 
 ### Android
 
