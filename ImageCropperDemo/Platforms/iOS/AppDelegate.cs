@@ -10,7 +10,7 @@ namespace ImageCropperDemo
 
         public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
         {
-            ImageCropper.Maui.Platform.Init();
+            new ImageCropper.Maui.Platform().Init();
             return base.FinishedLaunching(application, launchOptions);
         }
     }

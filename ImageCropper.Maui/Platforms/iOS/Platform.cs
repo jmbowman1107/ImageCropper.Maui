@@ -2,7 +2,7 @@
 {
     public class Platform
     {
-        public static void Init()
+        public void Init()
         {
             DependencyService.Register<IImageCropperWrapper, PlatformImageCropper>();
         }

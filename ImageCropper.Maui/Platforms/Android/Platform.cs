@@ -1,34 +1,36 @@
-﻿using Android.App;
-using Android.Content;
-using Android.App.Frag
+﻿using AndroidX.Activity.Result;
 using Com.Canhub.Cropper;
+using Fragment = AndroidX.Fragment.App.Fragment;
+using Object = Java.Lang.Object;
 
 namespace ImageCropper.Maui
 {
-    public class Platform
+    public class Platform : Fragment, IActivityResultCallback
     {
-        public static void Init()
+        public void Init(MauiAppCompatActivity activity)
         {
             DependencyService.Register<IImageCropperWrapper, PlatformImageCropper>();
+            ImageCropperActivityResultLauncher = activity.RegisterForActivityResult(new CropImageContract(), this);
         }
 
-        public static async void OnActivityResult(int requestCode, Result resultCode, Intent data)
-        {
-            new CropImageActivity().
-            if (requestCode == CropImage.CropImageActivityRequestCode)
-            {
-                CropImage.ActivityResult result = CropImage.ActivityResult(data);
+        public static ActivityResultLauncher ImageCropperActivityResultLauncher { get; set; }
 
-                // small delay
-                await System.Threading.Tasks.Task.Delay(TimeSpan.FromMilliseconds(100));
-                if (resultCode == Result.Ok)
+        public void OnActivityResult(Object cropImageResult)
+        {
+            if (cropImageResult is CropImage.ActivityResult result)
+            {
+                if (result.IsSuccessful)
                 {
-                    ImageCropper.Current.Success?.Invoke(result.Uri.Path);
+                    ImageCropper.Current.Success?.Invoke(result.UriContent?.Path);
                 }
-                else if ((int)resultCode == (int)(CropImage.CropImageActivityResultErrorCode))
+                else
                 {
                     ImageCropper.Current.Faiure?.Invoke();
                 }
+            }
+            else
+            {
+                ImageCropper.Current.Faiure?.Invoke();
             }
         }
     }

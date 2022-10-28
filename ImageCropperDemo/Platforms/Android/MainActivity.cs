@@ -11,7 +11,7 @@ namespace ImageCropperDemo
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            ImageCropper.Maui.Platform.Init();
+            new ImageCropper.Maui.Platform().Init(this);
             base.OnCreate(savedInstanceState);
         }
     }
