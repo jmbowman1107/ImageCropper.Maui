@@ -3,12 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ImageCropperDemo.MainPage">
 
-  <StackLayout Padding="20,40,20,20" Orientation="Vertical">
-    <Button Clicked="OnClickedRectangle" Text="Rectangle" />
-    <Button Clicked="OnClickedCircle" Text="Circle" />
-    <Image x:Name="imageView"
+  <Grid Padding="20,40,20,20">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+    <Button Grid.Row="0" Clicked="OnClickedRectangle" Text="Rectangle" />
+    <Button Grid.Row="1"  Clicked="OnClickedCircle" Text="Circle" />
+    <Image Grid.Row="2" x:Name="imageView"
                    HorizontalOptions="FillAndExpand"
                    VerticalOptions="FillAndExpand" />
-  </StackLayout>
-
+  </Grid>
 </ContentPage>

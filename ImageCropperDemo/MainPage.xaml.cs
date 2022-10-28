@@ -1,12 +1,7 @@
-﻿using System;
-using ImageCropper.Maui;
-
-namespace ImageCropperDemo
+﻿namespace ImageCropperDemo
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
-
         public MainPage()
         {
             InitializeComponent();
@@ -28,7 +23,7 @@ namespace ImageCropperDemo
                     });
                 },
                 Faiure = () => {
-                    Console.WriteLine("Error capturando la imagen o haciendo crop.");
+                    Console.WriteLine("Error capturing an image to crop.");
                 }
             }.Show(this);
         }
@@ -47,7 +42,7 @@ namespace ImageCropperDemo
                     });
                 },
                 Faiure = () => {
-                    Console.WriteLine("Error capturando la imagen o haciendo crop.");
+                    Console.WriteLine("Error capturing an image to crop.");
                 }
             }.Show(this);
         }
