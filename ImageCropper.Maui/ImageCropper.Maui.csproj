@@ -11,6 +11,10 @@
 		<Title>ImageCropper.Maui</Title>
 		<Copyright>2022</Copyright>
 		<PackageProjectUrl>https://github.com/jbowmanp1107/ImageCropper.Maui</PackageProjectUrl>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageTags>maui;image cropping;image cropper;xamarin;cropper;cropping;image;photo;rotate</PackageTags>
+		<Description>.NET MAUI plugin to crop and rotate photos.</Description>
+		<RepositoryUrl>https://github.com/jbowmanp1107/ImageCropper.Maui</RepositoryUrl>
 	</PropertyGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)' == 'net6.0-ios'">
@@ -19,7 +23,14 @@
 
   <ItemGroup Condition="'$(TargetFramework)' == 'net6.0-android'">
     <ProjectReference Include="..\AndroidImageCropper\AndroidImageCropper.csproj" />
-    <ProjectReference Include="..\KotlinAndroidExtensionsRuntime\KotlinAndroidExtensionsRuntime.csproj" />
+    <ProjectReference Include="..\KotlinAndroidExtensionsRuntime\KotlinAndroidExtensionsRuntime.csproj"  />
     <ProjectReference Include="..\KotlinParcelizeRuntime\KotlinParcelizeRuntime.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 </Project>
