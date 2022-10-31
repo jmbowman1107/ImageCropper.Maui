@@ -8,7 +8,7 @@
     <AssemblyVersion>1.7.20</AssemblyVersion>
     <FileVersion>$(AssemblyVersion)</FileVersion>
     <Version>$(AssemblyVersion)</Version>
-    <Title>Xamarin.Kotlin.Parcelize.Runtime</Title>
+    <Title>Kotlin.Parcelize.Runtime.Maui</Title>
     <RepositoryUrl>https://github.com/jbowmanp1107/ImageCropper.Maui</RepositoryUrl>
     <PackageProjectUrl>https://github.com/jbowmanp1107/ImageCropper.Maui</PackageProjectUrl>
     <Description>.NET MAUI and Xamarin Android Bindings for Kotlin.Parcelize.Runtime</Description>
@@ -27,6 +27,6 @@
     <PackageReference Include="Xamarin.Kotlin.StdLib" Version="1.7.20.1" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Xamarin.Kotlin.Android.Extensions.Runtime\Xamarin.Kotlin.Android.Extensions.Runtime.csproj" />
+    <ProjectReference Include="..\Kotlin.Android.Extensions.Runtime.Maui\Kotlin.Android.Extensions.Runtime.Maui.csproj" />
   </ItemGroup>
 </Project>

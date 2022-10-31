@@ -25,6 +25,7 @@
 
   <ItemGroup Condition="'$(TargetFramework)' == 'net6.0-android'">
     <ProjectReference Include="..\Com.Vannikteck.AndroidImageCropper\Com.Vanniktech.AndroidImageCropper.csproj" />
+    <ProjectReference Include="..\Maui.Kotlin.Parcelize.Runtime\Maui.Kotlin.Parcelize.Runtime.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -8,6 +8,11 @@
     <AssemblyVersion>1.7.20</AssemblyVersion>
     <FileVersion>$(AssemblyVersion)</FileVersion>
     <Version>$(AssemblyVersion)</Version>
+    <Title>Kotlin.Android.Extensions.Runtime.Maui</Title>
+    <RepositoryUrl>https://github.com/jbowmanp1107/ImageCropper.Maui</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/jbowmanp1107/ImageCropper.Maui</PackageProjectUrl>
+    <Description>.NET MAUI and Xamarin Android Bindings for Kotlin.Android.Extensions.Runtime</Description>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Jars\kotlin-android-extensions-runtime-1.7.20.jar" />
