@@ -4,10 +4,20 @@
     <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <AssemblyVersion>4.4.0</AssemblyVersion>
+    <FileVersion>$(AssemblyVersion)</FileVersion>
+    <Version>$(AssemblyVersion)</Version>
+    <Title>Com.Vanniktech.AndroidImageCropper</Title>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Jars\android-image-cropper-4.4.0.aar" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\LICENSE" Link="LICENSE">
+      <PackagePath>\</PackagePath>
+      <Pack>True</Pack>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.AndroidX.Activity.Ktx" Version="1.6.0.1" />
@@ -20,6 +30,6 @@
     <PackageReference Include="Xamarin.KotlinX.Coroutines.Core.Jvm" Version="1.6.4.1" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\KotlinParcelizeRuntime\KotlinParcelizeRuntime.csproj" />
+    <ProjectReference Include="..\Xamarin.Kotlin.Parcelize.Runtime\Xamarin.Kotlin.Parcelize.Runtime.csproj" />
   </ItemGroup>
 </Project>

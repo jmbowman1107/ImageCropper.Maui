@@ -15,22 +15,29 @@
 		<PackageTags>maui;image cropping;image cropper;xamarin;cropper;cropping;image;photo;rotate</PackageTags>
 		<Description>.NET MAUI plugin to crop and rotate photos.</Description>
 		<RepositoryUrl>https://github.com/jbowmanp1107/ImageCropper.Maui</RepositoryUrl>
-	</PropertyGroup>
+    <Version>1.0.0-alpha</Version>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+  </PropertyGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)' == 'net6.0-ios'">
     <ProjectReference Include="..\TOCropViewController\TOCropViewController.csproj" />
 	</ItemGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'net6.0-android'">
-    <ProjectReference Include="..\AndroidImageCropper\AndroidImageCropper.csproj" />
-    <ProjectReference Include="..\KotlinAndroidExtensionsRuntime\KotlinAndroidExtensionsRuntime.csproj"  />
-    <ProjectReference Include="..\KotlinParcelizeRuntime\KotlinParcelizeRuntime.csproj" />
+    <ProjectReference Include="..\Com.Vannikteck.AndroidImageCropper\Com.Vanniktech.AndroidImageCropper.csproj" />
+    <ProjectReference Include="..\Xamarin.Kotlin.Android.Extensions.Runtime\Xamarin.Kotlin.Android.Extensions.Runtime.csproj" />
+    <ProjectReference Include="..\Xamarin.Kotlin.Parcelize.Runtime\Xamarin.Kotlin.Parcelize.Runtime.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
     <None Include="..\README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
   </ItemGroup>
+
 </Project>

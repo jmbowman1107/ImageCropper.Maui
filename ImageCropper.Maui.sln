@@ -9,13 +9,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{1F32
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Binding", "Binding", "{B3E27B92-728F-4E51-9297-F54AE6F2B41D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AndroidImageCropper", "AndroidImageCropper\AndroidImageCropper.csproj", "{25449349-A7B9-4CC8-9F3D-976ABEA97D50}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Com.Vannikteck.AndroidImageCropper", "Com.Vannikteck.AndroidImageCropper\Com.Vanniktech.AndroidImageCropper.csproj", "{25449349-A7B9-4CC8-9F3D-976ABEA97D50}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TOCropViewController", "TOCropViewController\TOCropViewController.csproj", "{E25364A2-C7DB-45DE-904D-C854DBC408E9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KotlinParcelizeRuntime", "KotlinParcelizeRuntime\KotlinParcelizeRuntime.csproj", "{6E72B65B-AC99-42EE-8B47-E4CC2AC2EAF4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xamarin.Kotlin.Parcelize.Runtime", "Xamarin.Kotlin.Parcelize.Runtime\Xamarin.Kotlin.Parcelize.Runtime.csproj", "{6E72B65B-AC99-42EE-8B47-E4CC2AC2EAF4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KotlinAndroidExtensionsRuntime", "KotlinAndroidExtensionsRuntime\KotlinAndroidExtensionsRuntime.csproj", "{68D6D330-FF42-4B1D-A968-8F3E4E6B5C4C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xamarin.Kotlin.Android.Extensions.Runtime", "Xamarin.Kotlin.Android.Extensions.Runtime\Xamarin.Kotlin.Android.Extensions.Runtime.csproj", "{68D6D330-FF42-4B1D-A968-8F3E4E6B5C4C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo", "Demo", "{82207845-0012-43BD-B8C4-0B9FD3B88A5B}"
 EndProject
