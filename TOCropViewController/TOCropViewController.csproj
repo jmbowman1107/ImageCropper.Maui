@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net6.0-ios</TargetFramework>
+    <TargetFramework>net6.0-ios13.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>true</ImplicitUsings>
     <IsBindingProject>true</IsBindingProject>
@@ -10,6 +10,11 @@
     <Compile Remove="StructsAndEnumss.cs" />
   </ItemGroup>
 
+  <ItemGroup>
+    <NativeReference Include="Native References/TOCropViewController.framework">
+      <Kind>Framework</Kind>
+    </NativeReference>
+  </ItemGroup>
   <ItemGroup>
     <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
   </ItemGroup>
