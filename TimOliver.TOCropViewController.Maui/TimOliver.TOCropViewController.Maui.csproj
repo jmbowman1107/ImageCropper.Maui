@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net6.0-ios13.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>true</ImplicitUsings>
+		<IsBindingProject>true</IsBindingProject>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<AssemblyVersion>2.3.6</AssemblyVersion>
+		<FileVersion>$(AssemblyVersion)</FileVersion>
+		<Version>$(AssemblyVersion)</Version>
+		<Title>TOCropViewController</Title>
+		<RepositoryUrl>https://github.com/jbowmanp1107/ImageCropper.Maui</RepositoryUrl>
+		<PackageProjectUrl>https://github.com/jbowmanp1107/ImageCropper.Maui</PackageProjectUrl>
+		<Description>.NET MAUI iOS Bindings for TimOliver.TOCropViewController</Description>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+	</PropertyGroup>
+	<ItemGroup>
+		<ObjcBindingApiDefinition Include="ApiDefinition.cs" />
+		<ObjcBindingCoreSource Include="StructsAndEnums.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Remove="Native References\TOCropViewController.framework" />
+		<None Remove="Native References\TOCropViewController.framework\TOCropViewController" />
+		<None Remove="Native References\TOCropViewController.framework\Info.plist" />
+		<None Remove="Native References\TOCropViewController.framework\Headers\TOCropView.h" />
+		<None Remove="Native References\TOCropViewController.framework\Headers\TOCropToolbar.h" />
+		<None Remove="Native References\TOCropViewController.framework\Headers\UIImage+CropRotate.h" />
+		<None Remove="Native References\TOCropViewController.framework\Headers\TOCropViewController.h" />
+		<None Remove="Native References\TOCropViewController.framework\Modules\module.modulemap" />
+	</ItemGroup>
+	<ItemGroup>
+		<NativeReference Include="Native References\TOCropViewController.framework">
+			<Kind>Framework</Kind>
+			<SmartLink>False</SmartLink>
+		</NativeReference>
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="..\LICENSE">
+			<Link>LICENSE</Link>
+			<PackagePath>\</PackagePath>
+			<Pack>True</Pack>
+		</None>
+	</ItemGroup>
+</Project>

@@ -9,9 +9,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{1F32
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Binding", "Binding", "{B3E27B92-728F-4E51-9297-F54AE6F2B41D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Com.Vanniktech.AndroidImageCropper", "Com.Vannikteck.AndroidImageCropper\Com.Vanniktech.AndroidImageCropper.csproj", "{25449349-A7B9-4CC8-9F3D-976ABEA97D50}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Com.Vanniktech.AndroidImageCropper.Maui", "Com.Vannikteck.AndroidImageCropper.Maui\Com.Vanniktech.AndroidImageCropper.Maui.csproj", "{25449349-A7B9-4CC8-9F3D-976ABEA97D50}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TOCropViewController", "TOCropViewController\TOCropViewController.csproj", "{E25364A2-C7DB-45DE-904D-C854DBC408E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TimOliver.TOCropViewController.Maui", "TimOliver.TOCropViewController.Maui\TimOliver.TOCropViewController.Maui.csproj", "{E25364A2-C7DB-45DE-904D-C854DBC408E9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kotlin.Parcelize.Runtime.Maui", "Kotlin.Parcelize.Runtime.Maui\Kotlin.Parcelize.Runtime.Maui.csproj", "{6E72B65B-AC99-42EE-8B47-E4CC2AC2EAF4}"
 EndProject
