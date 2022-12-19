@@ -1,4 +1,7 @@
-﻿namespace ImageCropperDemo
+﻿using ImageCropper.Maui.Extensions;
+using Microsoft.Maui.LifecycleEvents;
+
+namespace ImageCropperDemo
 {
     public static class MauiProgram
     {

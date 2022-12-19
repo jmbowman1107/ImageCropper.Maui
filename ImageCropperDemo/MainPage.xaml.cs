@@ -19,6 +19,11 @@
                 {
                     Dispatcher.Dispatch(() =>
                     {
+
+#if ANDROID
+var test = MauiApplication.Current;
+                        var test2 = Microsoft.Maui.ApplicationModel.Platform.CurrentActivity;
+#endif
                         imageView.Source = ImageSource.FromFile(imageFile);
                     });
                 },

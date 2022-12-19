@@ -7,9 +7,13 @@ namespace ImageCropper.Maui
 {
     public class Platform : Fragment, IActivityResultCallback
     {
+        public static MauiAppCompatActivity AppActivity;
+
         public void Init(MauiAppCompatActivity activity)
         {
             DependencyService.Register<IImageCropperWrapper, PlatformImageCropper>();
+            Platform.AppActivity = activity;
+
             ImageCropperActivityResultLauncher = activity.RegisterForActivityResult(new CropImageContract(), this);
         }
 
@@ -21,7 +25,7 @@ namespace ImageCropper.Maui
             {
                 if (result.IsSuccessful)
                 {
-                    ImageCropper.Current.Success?.Invoke(result.UriContent?.Path);
+                    ImageCropper.Current.Success?.Invoke(result.GetUriFilePath(Platform.AppActivity, true));
                 }
                 else
                 {
