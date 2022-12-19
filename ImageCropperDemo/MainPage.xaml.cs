@@ -28,7 +28,7 @@
             }.Show(this);
         }
 
-        private void OnClickedCircle(object sender, EventArgs e)
+        private async void OnClickedCircle(object sender, EventArgs e)
         {
             imageView.Source = null;
             new ImageCropper.Maui.ImageCropper()
