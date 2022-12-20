@@ -12,55 +12,54 @@ namespace ImageCropper.Maui
     {
         public void ShowFromFile(ImageCropper imageCropper, string imageFile)
         {
-            
-            //UIImage image = UIImage.FromFile(imageFile);
 
-            //TOCropViewController cropViewController;
+            UIImage image = UIImage.FromFile(imageFile);
 
-            //if (imageCropper.CropShape == ImageCropper.CropShapeType.Oval)
-            //{
-            //    cropViewController = new TOCropViewController(TOCropViewCroppingStyle.Circular, image);
-            //}
-            //else
-            //{
-            //    cropViewController = new TOCropViewController(image);
-            //}
-            //cropViewController.DoneButtonTitle = imageCropper.CropButtonTitle;
-            //cropViewController.CancelButtonTitle = imageCropper.CancelButtonTitle;
+            TOCropViewController cropViewController;
 
-            //if (imageCropper.AspectRatioX > 0 && imageCropper.AspectRatioY > 0)
-            //{
-            //    cropViewController.AspectRatioPreset = TOCropViewControllerAspectRatioPreset.Custom;
-            //    cropViewController.ResetAspectRatioEnabled = false;
-            //    cropViewController.AspectRatioLockEnabled = true;
-            //    cropViewController.CustomAspectRatio = new CGSize(imageCropper.AspectRatioX, imageCropper.AspectRatioY);
-            //}
+            if (imageCropper.CropShape == ImageCropper.CropShapeType.Oval)
+            {
+                cropViewController = new TOCropViewController(TOCropViewCroppingStyle.Circular, image);
+            }
+            else
+            {
+                cropViewController = new TOCropViewController(image);
+            }
+            cropViewController.DoneButtonTitle = imageCropper.CropButtonTitle;
+            cropViewController.CancelButtonTitle = imageCropper.CancelButtonTitle;
 
-            //cropViewController.OnDidCropToRect = (outImage, cropRect, angle) =>
-            //{
-            //    Finalize(imageCropper, outImage);
-            //};
+            if (imageCropper.AspectRatioX > 0 && imageCropper.AspectRatioY > 0)
+            {
+                cropViewController.AspectRatioPreset = TOCropViewControllerAspectRatioPreset.Custom;
+                cropViewController.ResetAspectRatioEnabled = false;
+                cropViewController.AspectRatioLockEnabled = true;
+                cropViewController.CustomAspectRatio = new CGSize(imageCropper.AspectRatioX, imageCropper.AspectRatioY);
+            }
 
-            //cropViewController.OnDidCropToCircleImage = (outImage, cropRect, angle) =>
-            //{
-            //    Finalize(imageCropper, outImage);
-            //};
+            cropViewController.OnDidCropToRect = (outImage, cropRect, angle) =>
+            {
+                Finalize(imageCropper, outImage);
+            };
 
-            //cropViewController.OnDidFinishCancelled = (cancelled) =>
-            //{
-            //    imageCropper.Faiure?.Invoke();
-            //    UIApplication.SharedApplication.KeyWindow.RootViewController.DismissViewController(true, null);
-            //};
+            cropViewController.OnDidCropToCircleImage = (outImage, cropRect, angle) =>
+            {
+                Finalize(imageCropper, outImage);
+            };
 
-            //UIApplication.SharedApplication.KeyWindow.RootViewController.PresentViewController(cropViewController, true, null);
+            cropViewController.OnDidFinishCancelled = (cancelled) =>
+            {
+                imageCropper.Faiure?.Invoke();
+                UIApplication.SharedApplication.KeyWindow.RootViewController.DismissViewController(true, null);
+            };
 
-            //if (!string.IsNullOrWhiteSpace(imageCropper.PageTitle) && cropViewController.TitleLabel != null)
-            //{
-            //    UILabel titleLabel = cropViewController.TitleLabel;
-            //    titleLabel.Text = imageCropper.PageTitle;
-            //}
+            UIApplication.SharedApplication.KeyWindow.RootViewController.PresentViewController(cropViewController, true, null);
+
+            if (!string.IsNullOrWhiteSpace(imageCropper.PageTitle) && cropViewController.TitleLabel != null)
+            {
+                UILabel titleLabel = cropViewController.TitleLabel;
+                titleLabel.Text = imageCropper.PageTitle;
+            }
         }
-
         private static async void Finalize(ImageCropper imageCropper, UIImage image)
         {
             string documentsDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
