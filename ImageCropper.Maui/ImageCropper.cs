@@ -1,4 +1,6 @@
-﻿namespace ImageCropper.Maui
+﻿using System.IO;
+
+namespace ImageCropper.Maui
 {
     public class ImageCropper
     {
@@ -79,21 +81,23 @@
                     {
                         // save the file into local storage
                         newFile = Path.Combine(FileSystem.CacheDirectory, file.FileName);
-                        //Copiarlo llevaba mucho trabajo
-                        /*
-                        using (var stream = await file.OpenReadAsync())
-                        using (var newStream = File.OpenWrite(newFile)) {
-                            await stream.CopyToAsync(newStream);
-                            stream.Close();
-                            newStream.Close();
-                        }
-                        */
+
                         //Mover a cache local
                         if (File.Exists(newFile))
                         {
                             File.Delete(newFile);
                         }
-                        File.Move(file.FullPath, newFile);
+
+                        //Copiarlo llevaba mucho trabajo
+                        using (var stream = await file.OpenReadAsync())
+                        using (var newStream = File.OpenWrite(newFile))
+                        {
+                            await stream.CopyToAsync(newStream);
+                            stream.Close();
+                            newStream.Close();
+                        }
+
+                        //File.Move(file.FullPath, newFile);
                     }
 
                 }
