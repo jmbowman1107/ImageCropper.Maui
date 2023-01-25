@@ -28,12 +28,12 @@ namespace ImageCropper.Maui
                 }
                 else
                 {
-                    ImageCropper.Current.Faiure?.Invoke();
+                    ImageCropper.Current.Failure?.Invoke();
                 }
             }
             else
             {
-                ImageCropper.Current.Faiure?.Invoke();
+                ImageCropper.Current.Failure?.Invoke();
             }
         }
     }

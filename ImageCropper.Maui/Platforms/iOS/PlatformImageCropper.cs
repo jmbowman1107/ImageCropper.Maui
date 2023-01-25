@@ -48,7 +48,7 @@ namespace ImageCropper.Maui
 
             cropViewController.OnDidFinishCancelled = (cancelled) =>
             {
-                imageCropper.Faiure?.Invoke();
+                imageCropper.Failure?.Invoke();
                 UIApplication.SharedApplication.KeyWindow.RootViewController.DismissViewController(true, null);
             };
 
@@ -76,7 +76,7 @@ namespace ImageCropper.Maui
             else
             {
                 Debug.WriteLine("NOT saved as " + jpgFilename + " because" + err.LocalizedDescription);
-                imageCropper.Faiure?.Invoke();
+                imageCropper.Failure?.Invoke();
             }
             UIApplication.SharedApplication.KeyWindow.RootViewController.DismissViewController(true, null);
         }

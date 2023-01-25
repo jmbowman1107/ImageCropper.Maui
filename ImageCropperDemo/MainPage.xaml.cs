@@ -22,7 +22,7 @@
                         imageView.Source = ImageSource.FromFile(imageFile);
                     });
                 },
-                Faiure = () => {
+                Failure = () => {
                     Console.WriteLine("Error capturing an image to crop.");
                 }
             }.Show(this);
@@ -41,7 +41,7 @@
                         imageView.Source = ImageSource.FromFile(imageFile);
                     });
                 },
-                Faiure = () => {
+                Failure = () => {
                     Console.WriteLine("Error capturing an image to crop.");
                 }
             }.Show(this);

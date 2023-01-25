@@ -40,7 +40,7 @@ namespace ImageCropper.Maui
 
         public Action<string> Success { get; set; }
 
-        public Action Faiure { get; set; }
+        public Action Failure { get; set; }
 
         /*
         public PickMediaOptions PickMediaOptions { get; set; } = new PickMediaOptions
@@ -73,7 +73,7 @@ namespace ImageCropper.Maui
                     }
                     else
                     {
-                        Faiure?.Invoke();
+                        Failure?.Invoke();
                         return;
                     }
 
@@ -108,7 +108,7 @@ namespace ImageCropper.Maui
 
                 if (file == null || newFile == null)
                 {
-                    Faiure?.Invoke();
+                    Failure?.Invoke();
                     return;
                 }
                 if (DeviceInfo.Platform == DevicePlatform.Android)
