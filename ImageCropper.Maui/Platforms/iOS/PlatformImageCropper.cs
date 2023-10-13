@@ -54,7 +54,10 @@ namespace ImageCropper.Maui
 
             UIApplication.SharedApplication.KeyWindow.RootViewController.PresentViewController(cropViewController, true, null);
 
-            cropViewController.Title = imageCropper.PageTitle;
+            if(imageCropper.PageTitle != null && imageCropper.PageTitle.Length > 0)
+            {
+                cropViewController.Title = imageCropper.PageTitle;
+            }
         }
         private static async void Finalize(ImageCropper imageCropper, UIImage image)
         {
