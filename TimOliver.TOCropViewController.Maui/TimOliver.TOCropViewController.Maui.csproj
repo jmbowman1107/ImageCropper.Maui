@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFramework>net6.0-ios13.0</TargetFramework>
+		<TargetFramework>net8.0-ios</TargetFramework>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>true</ImplicitUsings>
 		<IsBindingProject>true</IsBindingProject>
@@ -20,21 +20,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<None Remove="Native References\TOCropViewController.framework" />
-		<None Remove="Native References\TOCropViewController.framework\TOCropViewController" />
-		<None Remove="Native References\TOCropViewController.framework\Info.plist" />
-		<None Remove="Native References\TOCropViewController.framework\Headers\TOCropView.h" />
-		<None Remove="Native References\TOCropViewController.framework\Headers\TOCropToolbar.h" />
-		<None Remove="Native References\TOCropViewController.framework\Headers\UIImage+CropRotate.h" />
-		<None Remove="Native References\TOCropViewController.framework\Headers\TOCropViewController.h" />
-		<None Remove="Native References\TOCropViewController.framework\Modules\module.modulemap" />
-	</ItemGroup>
-	<ItemGroup>
-		<NativeReference Include="Native References\TOCropViewController.framework">
+		<NativeReference Include="TOCropViewController.xcframework">
 			<Kind>Framework</Kind>
-			<SmartLink>False</SmartLink>
 		</NativeReference>
 	</ItemGroup>
+
 	<ItemGroup>
 		<None Include="..\LICENSE">
 			<Link>LICENSE</Link>
