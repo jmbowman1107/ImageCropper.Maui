@@ -24,6 +24,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Kotlin.StdLib" Version="1.7.20.1" />
+    <PackageReference Include="Xamarin.Kotlin.StdLib" Version="1.9.23" />
   </ItemGroup>
 </Project>

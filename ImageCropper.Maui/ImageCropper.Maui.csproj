@@ -14,7 +14,7 @@
         <PackageTags>maui;image cropping;image cropper;xamarin;cropper;cropping;image;photo;rotate</PackageTags>
         <Description>.NET MAUI plugin to crop and rotate photos.</Description>
         <RepositoryUrl>https://github.com/jbowmanp1107/ImageCropper.Maui</RepositoryUrl>
-        <Version>1.0.2</Version>
+        <Version>1.1.0</Version>
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
 	</PropertyGroup>
 
