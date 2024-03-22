@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net8.0-android</TargetFramework>
-    <AssetTargetFallback>$(AssetTargetFallback);net7.0-android</AssetTargetFallback>
+    <AssetTargetFallback>$(AssetTargetFallback);net7.0-android33.0</AssetTargetFallback>
     <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>

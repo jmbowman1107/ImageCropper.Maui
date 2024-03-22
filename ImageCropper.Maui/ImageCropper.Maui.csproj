@@ -19,7 +19,7 @@
 	</PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)' == 'net8.0-android'">
-    <AssetTargetFallback>$(AssetTargetFallback);net7.0-android</AssetTargetFallback>
+    <AssetTargetFallback>$(AssetTargetFallback);net7.0-android33.0</AssetTargetFallback>
   </PropertyGroup>
 
   <!-- Fallback settings for iOS -->
