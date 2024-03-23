@@ -1,6 +1,4 @@
-﻿using System.IO;
-
-namespace ImageCropper.Maui
+﻿namespace ImageCropper.Maui
 {
     public class ImageCropper
     {
@@ -41,15 +39,6 @@ namespace ImageCropper.Maui
         public Action<string> Success { get; set; }
 
         public Action Failure { get; set; }
-
-        /*
-        public PickMediaOptions PickMediaOptions { get; set; } = new PickMediaOptions
-        {
-            PhotoSize = PhotoSize.Large,
-        };
-
-        public StoreCameraMediaOptions StoreCameraMediaOptions { get; set; } = new StoreCameraMediaOptions();
-        */
 
         public MediaPickerOptions MediaPickerOptions { get; set; } = new MediaPickerOptions();
 
@@ -96,10 +85,7 @@ namespace ImageCropper.Maui
                             stream.Close();
                             newStream.Close();
                         }
-
-                        //File.Move(file.FullPath, newFile);
                     }
-
                 }
                 catch (Exception ex)
                 {
@@ -110,11 +96,6 @@ namespace ImageCropper.Maui
                 {
                     Failure?.Invoke();
                     return;
-                }
-                if (DeviceInfo.Platform == DevicePlatform.Android)
-                {
-                    //Delay for fix Xamarin.Essentials.Platform.CurrentActivity no MediaPicker
-                    await Task.Delay(TimeSpan.FromMilliseconds(2000));
                 }
                 imageFile = newFile;
             }
