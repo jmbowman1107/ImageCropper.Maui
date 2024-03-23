@@ -27,10 +27,6 @@
 	</ItemGroup>
 
   <ItemGroup>
-    <None Include="**/TOCropViewController.xcframework/**/*.*" Pack="true" PackagePath="lib/$(TargetFramework)" />
-  </ItemGroup>
-
-	<ItemGroup>
 		<None Include="..\LICENSE">
 			<Link>LICENSE</Link>
 			<PackagePath>\</PackagePath>
