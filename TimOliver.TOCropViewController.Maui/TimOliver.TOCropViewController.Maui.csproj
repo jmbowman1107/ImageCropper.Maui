@@ -6,7 +6,7 @@
 		<ImplicitUsings>true</ImplicitUsings>
 		<IsBindingProject>true</IsBindingProject>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-		<AssemblyVersion>2.6.1.1</AssemblyVersion>
+		<AssemblyVersion>2.6.1.2</AssemblyVersion>
 		<FileVersion>$(AssemblyVersion)</FileVersion>
 		<Version>$(AssemblyVersion)</Version>
 		<Title>TOCropViewController</Title>
@@ -25,6 +25,10 @@
 			<Kind>Framework</Kind>
 		</NativeReference>
 	</ItemGroup>
+
+  <ItemGroup>
+    <None Include="**/TOCropViewController.xcframework/**/*.*" Pack="true" PackagePath="lib/$(TargetFramework)" />
+  </ItemGroup>
 
 	<ItemGroup>
 		<None Include="..\LICENSE">
