@@ -50,9 +50,14 @@
   <ItemGroup Condition="'$(TargetFramework)' == 'net8.0-android'">
       <ProjectReference Include="..\Com.Vannikteck.AndroidImageCropper.Maui\Com.Vanniktech.AndroidImageCropper.Maui.csproj" />
   </ItemGroup>
-
+  <ItemGroup Condition="'$(TargetFramework)' == 'net7.0-android'">
+    <ProjectReference Include="..\Com.Vannikteck.AndroidImageCropper.Maui\Com.Vanniktech.AndroidImageCropper.Maui.csproj" />
+  </ItemGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'net8.0-ios'">
       <ProjectReference Include="..\TimOliver.TOCropViewController.Maui\TimOliver.TOCropViewController.Maui.csproj" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'net7.0-ios'">
+    <ProjectReference Include="..\TimOliver.TOCropViewController.Maui\TimOliver.TOCropViewController.Maui.csproj" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'net8.0-android'">
@@ -60,11 +65,17 @@
       <Version>1.4.0.1</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'net7.0-android'">
+    <PackageReference Include="Xamarin.AndroidX.Collection.Ktx">
+      <Version>1.4.0.1</Version>
+    </PackageReference>
+  </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Update="Microsoft.Maui.Controls" Version="8.0.14" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Update="Microsoft.Maui.Controls.Compatibility" Version="8.0.14" />
+    <PackageReference Include="Xamarin.AndroidX.Collection.Ktx" Version="1.4.0.1" Condition="'$(TargetFramework)' == 'net8.0-android' Or '$(TargetFramework)' == 'net7.0-android'" />
+
+    <PackageReference Update="Microsoft.Maui.Controls" Version="8.0.14" Condition="'$(TargetFramework)' == 'net8.0-android' Or '$(TargetFramework)' == 'net8.0-ios' Or '$(TargetFramework)' == 'net8.0'" />
+
+    <PackageReference Update="Microsoft.Maui.Controls.Compatibility" Version="8.0.14" Condition="'$(TargetFramework)' == 'net8.0-android' Or '$(TargetFramework)' == 'net8.0-ios' Or '$(TargetFramework)' == 'net8.0'" />
   </ItemGroup>
 </Project>
