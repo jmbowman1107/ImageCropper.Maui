@@ -1,8 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<TargetFramework>net8.0-ios;net7.0-ios</TargetFramework>
-    <AssetTargetFallback>$(AssetTargetFallback);net7.0-ios</AssetTargetFallback>
-		<Nullable>enable</Nullable>
+    <Nullable>enable</Nullable>
 		<ImplicitUsings>true</ImplicitUsings>
 		<IsBindingProject>true</IsBindingProject>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
@@ -20,7 +19,12 @@
 		<ObjcBindingCoreSource Include="StructsAndEnums.cs" />
 	</ItemGroup>
 
-	<ItemGroup>
+  <PropertyGroup Condition="'$(TargetFramework)' == 'net8.0-ios'">
+    <AssetTargetFallback>$(AssetTargetFallback);net7.0-ios17.2</AssetTargetFallback>
+  </PropertyGroup>
+
+
+  <ItemGroup>
 		<NativeReference Include="TOCropViewController.xcframework">
 			<Kind>Framework</Kind>
 		</NativeReference>

@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFrameworks>net8.0-android;net7.0-android</TargetFrameworks>
-    <AssetTargetFallback>$(AssetTargetFallback);net7.0-android33.0</AssetTargetFallback>
     <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -14,6 +13,9 @@
     <PackageProjectUrl>https://github.com/jbowmanp1107/ImageCropper.Maui</PackageProjectUrl>
     <Description>.NET MAUI and Xamarin Android Bindings for Com.Vanniktech.AndroidImageCropper</Description>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)' == 'net8.0-android'">
+    <AssetTargetFallback>$(AssetTargetFallback);net7.0-android33.0</AssetTargetFallback>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Jars\android-image-cropper-4.4.0.aar" />

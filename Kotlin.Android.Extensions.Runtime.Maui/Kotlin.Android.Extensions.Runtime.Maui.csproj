@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFrameworks>net8.0-android;net7.0-android</TargetFrameworks>
-    <AssetTargetFallback>$(AssetTargetFallback);net7.0-android33.0</AssetTargetFallback>
     <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -15,6 +14,11 @@
     <Description>.NET MAUI and Xamarin Android Bindings for Kotlin.Android.Extensions.Runtime</Description>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)' == 'net8.0-android'">
+    <AssetTargetFallback>$(AssetTargetFallback);net7.0-android33.0</AssetTargetFallback>
+  </PropertyGroup>
+
   <ItemGroup>
     <None Remove="Jars\kotlin-android-extensions-runtime-1.7.20.jar" />
   </ItemGroup>
