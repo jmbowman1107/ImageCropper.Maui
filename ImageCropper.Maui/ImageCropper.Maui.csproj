@@ -12,7 +12,7 @@
         <PackageTags>maui;image cropping;image cropper;xamarin;cropper;cropping;image;photo;rotate</PackageTags>
         <Description>.NET MAUI plugin to crop and rotate photos.</Description>
         <RepositoryUrl>https://github.com/jbowmanp1107/ImageCropper.Maui</RepositoryUrl>
-        <Version>1.1.0.5</Version>
+        <Version>1.1.0.6</Version>
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
         <TargetPlatformIos>True</TargetPlatformIos>
         <TargetRuntimeIos>net8.0</TargetRuntimeIos>
@@ -24,8 +24,9 @@
 	</PropertyGroup>
 
   <PropertyGroup>
-    <AssetTargetFallback Condition="'$(TargetFramework)' == 'net8.0' Or '$(TargetFramework)' == 'net8.0-android' Or '$(TargetFramework)' == 'net7.0-android'">$(AssetTargetFallback);net7.0-android33.0</AssetTargetFallback>
+    <AssetTargetFallback Condition="'$(TargetFramework)' == 'net8.0-android' Or '$(TargetFramework)' == 'net7.0-android'">$(AssetTargetFallback);net7.0-android33.0</AssetTargetFallback>
     <AssetTargetFallback Condition="'$(TargetFramework)' == 'net8.0-ios'">$(AssetTargetFallback);net7.0-ios</AssetTargetFallback>
+    <AssetTargetFallback Condition="'$(TargetFramework)' == 'net8.0'">$(AssetTargetFallback);net7.0</AssetTargetFallback>
   </PropertyGroup>
 
   <ItemGroup>
@@ -37,11 +38,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Com.Vannikteck.AndroidImageCropper.Maui\Com.Vanniktech.AndroidImageCropper.Maui.csproj" Condition="'$(TargetFramework)' == 'net8.0-android' Or '$(TargetFramework)' == 'net7.0-android'" />
-    <ProjectReference Include="..\TimOliver.TOCropViewController.Maui\TimOliver.TOCropViewController.Maui.csproj" Condition="'$(TargetFramework)' == 'net8.0-ios' Or '$(TargetFramework)' == 'net7.0-ios'" />
+    <ProjectReference Include="..\TOCropViewController.Maui\TOCropViewController.Maui.csproj" Condition="'$(TargetFramework)' == 'net8.0-ios' Or '$(TargetFramework)' == 'net7.0-ios'" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.AndroidX.Collection.Ktx" Version="1.4.0.1" Condition="'$(TargetFramework)' == 'net8.0-android' Or '$(TargetFramework)' == 'net7.0-android'" />
     <PackageReference Update="Microsoft.Maui.Controls" Version="8.0.14" Condition="'$(TargetFramework)' == 'net8.0-android' Or '$(TargetFramework)' == 'net8.0-ios' Or '$(TargetFramework)' == 'net8.0'" />
     <PackageReference Update="Microsoft.Maui.Controls.Compatibility" Version="8.0.14" Condition="'$(TargetFramework)' == 'net8.0-android' Or '$(TargetFramework)' == 'net8.0-ios' Or '$(TargetFramework)' == 'net8.0'" />
   </ItemGroup>
