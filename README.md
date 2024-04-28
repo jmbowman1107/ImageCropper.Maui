@@ -27,7 +27,8 @@ Supports Android and iOS.
 
 ## Setup
 
-* Install the [nuget package](https://www.nuget.org/packages/ImageCropper.Maui/) in portable and all platform specific projects.
+* Install the [nuget package](https://www.nuget.org/packages/ImageCropper.Maui/) in portable and all platform specific projects. NOTE: TOCropView.Maui results in long file paths, and if your base repo path is little long, this package cannot be succesfully installed from Visual Studio. To work around this issue install the package using 'dotnet restore' from the CLI.
+  
 * This plugin uses the **MediaPicker**, so be sure to complete the full setup this. Please fully read through the [MediaPicker description](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/device-media/picker).
 
 ### Android
