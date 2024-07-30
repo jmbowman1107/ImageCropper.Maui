@@ -11,13 +11,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Binding", "Binding", "{B3E2
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Com.Vanniktech.AndroidImageCropper.Maui", "Com.Vannikteck.AndroidImageCropper.Maui\Com.Vanniktech.AndroidImageCropper.Maui.csproj", "{25449349-A7B9-4CC8-9F3D-976ABEA97D50}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kotlin.Parcelize.Runtime.Maui", "Kotlin.Parcelize.Runtime.Maui\Kotlin.Parcelize.Runtime.Maui.csproj", "{6E72B65B-AC99-42EE-8B47-E4CC2AC2EAF4}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kotlin.Android.Extensions.Runtime.Maui", "Kotlin.Android.Extensions.Runtime.Maui\Kotlin.Android.Extensions.Runtime.Maui.csproj", "{68D6D330-FF42-4B1D-A968-8F3E4E6B5C4C}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo", "Demo", "{82207845-0012-43BD-B8C4-0B9FD3B88A5B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TOCropView.Maui", "TOCropView.Maui\TOCropView.Maui.csproj", "{D824FBE6-BE8C-4BDA-A2FE-DC3D7ABB3E49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageCropperDemo", "ImageCropperDemo\ImageCropperDemo.csproj", "{44AC4F20-9D90-4CF0-B387-6DE8E6BC6303}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,18 +31,14 @@ Global
 		{25449349-A7B9-4CC8-9F3D-976ABEA97D50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25449349-A7B9-4CC8-9F3D-976ABEA97D50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25449349-A7B9-4CC8-9F3D-976ABEA97D50}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6E72B65B-AC99-42EE-8B47-E4CC2AC2EAF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6E72B65B-AC99-42EE-8B47-E4CC2AC2EAF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6E72B65B-AC99-42EE-8B47-E4CC2AC2EAF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6E72B65B-AC99-42EE-8B47-E4CC2AC2EAF4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{68D6D330-FF42-4B1D-A968-8F3E4E6B5C4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{68D6D330-FF42-4B1D-A968-8F3E4E6B5C4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{68D6D330-FF42-4B1D-A968-8F3E4E6B5C4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{68D6D330-FF42-4B1D-A968-8F3E4E6B5C4C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D824FBE6-BE8C-4BDA-A2FE-DC3D7ABB3E49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D824FBE6-BE8C-4BDA-A2FE-DC3D7ABB3E49}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D824FBE6-BE8C-4BDA-A2FE-DC3D7ABB3E49}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D824FBE6-BE8C-4BDA-A2FE-DC3D7ABB3E49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44AC4F20-9D90-4CF0-B387-6DE8E6BC6303}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44AC4F20-9D90-4CF0-B387-6DE8E6BC6303}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44AC4F20-9D90-4CF0-B387-6DE8E6BC6303}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44AC4F20-9D90-4CF0-B387-6DE8E6BC6303}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,9 +46,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{DD656A7B-EB73-4582-8077-C08994ABA248} = {1F32F736-E6C2-426D-A56D-29BFE6E8B33D}
 		{25449349-A7B9-4CC8-9F3D-976ABEA97D50} = {B3E27B92-728F-4E51-9297-F54AE6F2B41D}
-		{6E72B65B-AC99-42EE-8B47-E4CC2AC2EAF4} = {B3E27B92-728F-4E51-9297-F54AE6F2B41D}
-		{68D6D330-FF42-4B1D-A968-8F3E4E6B5C4C} = {B3E27B92-728F-4E51-9297-F54AE6F2B41D}
 		{D824FBE6-BE8C-4BDA-A2FE-DC3D7ABB3E49} = {B3E27B92-728F-4E51-9297-F54AE6F2B41D}
+		{44AC4F20-9D90-4CF0-B387-6DE8E6BC6303} = {82207845-0012-43BD-B8C4-0B9FD3B88A5B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F7BCC4B0-F90B-43B2-B5F2-3A653FB1CFA0}

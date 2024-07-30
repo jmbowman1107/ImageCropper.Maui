@@ -1,11 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net8.0-android;net7.0-android</TargetFrameworks>
+    <TargetFramework>net8.0-android</TargetFramework>
     <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <AssemblyVersion>4.4.0.5</AssemblyVersion>
+    <AssemblyVersion>4.5.0</AssemblyVersion>
     <FileVersion>$(AssemblyVersion)</FileVersion>
     <Version>$(AssemblyVersion)</Version>
     <Title>Com.Vanniktech.AndroidImageCropper</Title>
@@ -14,15 +14,6 @@
     <Description>.NET MAUI and Xamarin Android Bindings for Com.Vanniktech.AndroidImageCropper</Description>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(TargetFramework)' == 'net8.0-android'">
-    <AssetTargetFallback>$(AssetTargetFallback);net7.0-android33.0</AssetTargetFallback>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(TargetFramework)' == 'net7.0-android'">
-    <AssetTargetFallback>$(AssetTargetFallback);net7.0-android33.0</AssetTargetFallback>
-  </PropertyGroup>
-  <ItemGroup>
-    <None Remove="Jars\android-image-cropper-4.4.0.aar" />
-  </ItemGroup>
   <ItemGroup>
     <None Include="..\LICENSE" Link="LICENSE">
       <PackagePath>\</PackagePath>
@@ -30,17 +21,15 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.AndroidX.Activity.Ktx" Version="1.8.2.1" />
-    <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.6.1.7" />
-    <PackageReference Include="Xamarin.AndroidX.Collection.Ktx" Version="1.4.0.1" />
-    <PackageReference Include="Xamarin.AndroidX.Core.Core.Ktx" Version="1.12.0.4" />
-    <PackageReference Include="Xamarin.AndroidX.DataBinding.ViewBinding" Version="8.3.0" />
-    <PackageReference Include="Xamarin.AndroidX.ExifInterface" Version="1.3.7.1" />
-    <PackageReference Include="Xamarin.Kotlin.StdLib.Jdk8" Version="1.9.23" />
-    <PackageReference Include="Xamarin.KotlinX.Coroutines.Android" Version="1.8.0.1" />
-    <PackageReference Include="Xamarin.KotlinX.Coroutines.Core.Jvm" Version="1.8.0.1" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Kotlin.Parcelize.Runtime.Maui\Kotlin.Parcelize.Runtime.Maui.csproj" />
+    <PackageReference Include="Xamarin.AndroidX.Activity.Ktx" Version="1.9.0.4" />
+    <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.7.0.1" />
+    <PackageReference Include="Xamarin.AndroidX.Collection.Ktx" Version="1.4.0.5" />
+    <PackageReference Include="Xamarin.AndroidX.Core.Core.Ktx" Version="1.13.1.3" />
+    <PackageReference Include="Xamarin.AndroidX.DataBinding.ViewBinding" Version="8.5.0.1" />
+    <PackageReference Include="Xamarin.AndroidX.ExifInterface" Version="1.3.7.5" />
+    <PackageReference Include="Xamarin.Kotlin.Parcelize.Runtime" Version="2.0.0.1" />
+    <PackageReference Include="Xamarin.Kotlin.StdLib.Jdk8" Version="2.0.0.1" />
+    <PackageReference Include="Xamarin.KotlinX.Coroutines.Android" Version="1.8.1.1" />
+    <PackageReference Include="Xamarin.KotlinX.Coroutines.Core.Jvm" Version="1.8.1.1" />
   </ItemGroup>
 </Project>
