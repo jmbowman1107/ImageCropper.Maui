@@ -31,7 +31,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'" Include="..\Com.Vannikteck.AndroidImageCropper.Maui\Com.Vanniktech.AndroidImageCropper.Maui.csproj" />
+    <ProjectReference Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'" Include="..\Com.Vanniktech.AndroidImageCropper.Maui\Com.Vanniktech.AndroidImageCropper.Maui.csproj" />
     <ProjectReference Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'" Include="..\TOCropView.Maui\TOCropView.Maui.csproj" />
   </ItemGroup>
 
