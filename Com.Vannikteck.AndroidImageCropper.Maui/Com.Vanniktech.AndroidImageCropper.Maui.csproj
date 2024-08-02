@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net8.0-android</TargetFramework>
+    <TargetFramework>net8.0-android34</TargetFramework>
     <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -14,6 +14,9 @@
     <Description>.NET MAUI and Xamarin Android Bindings for Com.Vanniktech.AndroidImageCropper</Description>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Jars\android-image-cropper-4.5.0.aar" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="..\LICENSE" Link="LICENSE">
       <PackagePath>\</PackagePath>
