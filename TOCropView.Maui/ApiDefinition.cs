@@ -184,6 +184,10 @@ namespace Bind_TOCropViewController
         [Export("cropBoxAspectRatioIsPortrait")]
         bool CropBoxAspectRatioIsPortrait { get; }
 
+        // @property (assign, nonatomic) CGFloat minimumAspectRatio;
+        [Export("minimumAspectRatio", ArgumentSemantic.Assign)]
+        CGFloat MinimumAspectRatio { get; set; }
+
         // @property (assign, nonatomic) NSInteger angle;
         [Export("angle")]
         nint Angle { get; set; }
@@ -435,6 +439,10 @@ namespace Bind_TOCropViewController
         // @property (assign, nonatomic) CGSize customAspectRatio;
         [Export("customAspectRatio", ArgumentSemantic.Assign)]
         CGSize CustomAspectRatio { get; set; }
+
+        // @property (assign, nonatomic) CGFloat minimumAspectRatio;
+        [Export("minimumAspectRatio", ArgumentSemantic.Assign)]
+        CGFloat MinimumAspectRatio { get; set; }
 
         // @property (readonly, nonatomic) UILabel * _Nullable titleLabel;
         [NullAllowed, Export("titleLabel")]
