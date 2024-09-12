@@ -5,7 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <AssemblyVersion>4.5.0</AssemblyVersion>
+    <AssemblyVersion>4.6.0</AssemblyVersion>
     <FileVersion>$(AssemblyVersion)</FileVersion>
     <Version>$(AssemblyVersion)</Version>
     <Title>Com.Vanniktech.AndroidImageCropper</Title>
@@ -14,9 +14,6 @@
     <Description>.NET MAUI and Xamarin Android Bindings for Com.Vanniktech.AndroidImageCropper</Description>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
-  <ItemGroup>
-    <None Remove="Jars\android-image-cropper-4.5.0.aar" />
-  </ItemGroup>
   <ItemGroup>
     <None Include="..\LICENSE" Link="LICENSE">
       <PackagePath>\</PackagePath>
